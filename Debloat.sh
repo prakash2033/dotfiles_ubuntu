@@ -35,3 +35,6 @@ echo "evince/documents removed"
 sudo apt purge ubuntu-report popularity-contest apport whoopsie -y
 echo "Yay ubuntu stoped spying on you!"
 
+
+sudo apt autopurge
+
