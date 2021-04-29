@@ -2,11 +2,10 @@
 
 # xinitrc runs automatically when you run startx.
 
-setbg &			# set the background with the `setbg` script
-#xcompmgr &              # xcompmgr for transparency
+~/.local/bin/setbg &	# set the background with the `setbg` script
 dunst &			# dunst for notifications
-xset r rate 300 50 &	# Speed xrate up
-unclutter &		# Remove mouse when idle
 dwmblocks &		# Status bar
+
+xfce4-power-manager &   # XFCE4 Power Manager
 
 ssh-agent dwm
