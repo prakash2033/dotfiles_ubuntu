@@ -9,7 +9,7 @@ export TERMINAL="st"
 export BROWSER="google-chrome"
 
 
-echo "$0" | grep "bash$" >/dev/null && [ -f ~/.bashrc ] && source "$HOME/.bashrc" 
+#echo "$0" | grep "bash$" >/dev/null && [ -f ~/.bashrc ] && source "$HOME/.bashrc" 
 
 # Start graphical server if dwm not already running.
-[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x dwm >/dev/null && exec startx
+[ "$(tty)" = "/dev/pts/1" ] && ! pgrep -x dwm >/dev/null && exec startx
