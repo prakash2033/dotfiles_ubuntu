@@ -23,7 +23,8 @@ sudo make install
 you may have to kill -9 -1 or reboot your system
 
 ## Screenshots
-
+![Alt text](/screenshots/2021-04-30-160401_1920x1080_scrot.png?raw=true "Home Screen with wallpaper")
+![Alt text](/screenshots/2021-04-30-160708_1920x1080_scrot.png?raw=true "Home Screen with st terminal and neofetch")
 
 ## Credits
 - [Reddit Post](https://www.reddit.com/r/suckless/comments/l3a2yg/ubuntudebian_icons_in_dwm_status_bar_and_dmenu/)
