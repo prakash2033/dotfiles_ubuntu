@@ -62,7 +62,7 @@ parse_git_dirty() {
 
 
 parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty))/"
 }
 
 if [ "$color_prompt" = yes ]; then
