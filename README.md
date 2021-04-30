@@ -23,3 +23,4 @@ you may have to kill -9 -1 or reboot your system
 
 ## Credits
 [Reddit Post](https://www.reddit.com/r/suckless/comments/l3a2yg/ubuntudebian_icons_in_dwm_status_bar_and_dmenu/)
+[LukeSmith - Colored Characters and Emoji in dmenu and dwm](https://www.youtube.com/watch?v=0QkByBugq_4)
