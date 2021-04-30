@@ -1,4 +1,5 @@
 # dotfiles
+This repo contains my Ubuntu 20.04 dotfiles which i use for my suckless dwm environment.
 
 ## Colored Emoji Icons on Dwm, DMenu, St in Ubuntu 20.04
 Install below packages
