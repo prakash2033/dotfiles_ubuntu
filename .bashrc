@@ -56,8 +56,18 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+parse_git_dirty() {
+  [[ -n "$(git status -s 2> /dev/null)" ]] && echo "*"
+}
+
+
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
+}
+
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W \[$(tput setaf 6)\$(parse_git_branch)\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -92,11 +102,15 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias dwm='cd ~/dwm'
-alias dwmb='cd ~/dwmblocks'
-alias st='cd ~/st'
-alias bin='cd ~/.local/bin'
-alias lbin='cd ~/Downloads/Luke/voidrice/.local/bin'
+alias dwm='cd ~/dwm && ls -a'
+alias dwmb='cd ~/dwmblocks && ls -a'
+alias st='cd ~/st && ls -a'
+alias bin='cd ~/.local/bin && ls -a'
+alias lbin='cd ~/Downloads/Luke/voidrice/.local/bin && ls -a'
+alias dotfiles='cd ~/dotfiles && ls -a'
+
+alias tos='cd ~/dev/tote-tocc-tos && ls -a'
+alias label='cd ~/dev/tote-tocc-labelservice && ls -a'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
