@@ -1,6 +1,6 @@
 # dotfiles
 
-## Colored Emoji Icons on Ubuntu 20.04
+## Colored Emoji Icons on Dwm, DMenu, St in Ubuntu 20.04
 Install below packages
 ```
 sudo apt install dh-autoreconf libx11-dev libxinerama-dev libxft-dev xutils-dev fonts-noto-color-emoji
