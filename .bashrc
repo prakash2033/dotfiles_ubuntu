@@ -102,6 +102,13 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias d='cd ~/Downloads && ls -a'
+alias D='cd ~/Documents && ls -a'
+alias p='cd ~/Pictures && ls -a'
+alias s='cd ~/Pictures/Screenshots && ls -a'
+alias v='cd ~/Videos && ls -a'
+alias m='cd ~/Music && ls -a'
+
 alias dwm='cd ~/dwm && ls -a'
 alias dwmb='cd ~/dwmblocks && ls -a'
 alias st='cd ~/st && ls -a'
