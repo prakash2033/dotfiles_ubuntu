@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# xprofile runs automatically when lightdm starts.
+
+# Default programs:
+export EDITOR="nvim"
+export TERMINAL="st"
+export BROWSER="google-chrome"
+
+~/.local/bin/setbg &	# set the background with the `setbg` script
+dunst &			# dunst for notifications
+dwmblocks &		# Status bar
+
+xfce4-power-manager &   # XFCE4 Power Manager
+
+ssh-agent dwm
