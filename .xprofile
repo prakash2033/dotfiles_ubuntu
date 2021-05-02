@@ -13,5 +13,3 @@ dwmblocks &		# Status bar
 compton &		# Compton display compositor for transparency and to avoid sceen tearing
 
 xfce4-power-manager &   # XFCE4 Power Manager
-
-ssh-agent dwm
