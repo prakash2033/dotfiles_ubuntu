@@ -66,7 +66,7 @@ parse_git_branch() {
 }
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
     PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W \[$(tput setaf 6)\$(parse_git_branch)\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
@@ -78,8 +78,12 @@ case "$TERM" in
 xterm*|rxvt*)
     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
     ;;
+st*)
+    PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
+    ;;
 *)
     ;;
+
 esac
 
 # enable color support of ls and also add handy aliases
@@ -113,8 +117,11 @@ alias dwm='cd ~/dwm && ls -a'
 alias dwmb='cd ~/dwmblocks && ls -a'
 alias st='cd ~/st && ls -a'
 alias bin='cd ~/.local/bin && ls -a'
+alias luke='cd ~/Downloads/Luke && ls -a'
 alias lbin='cd ~/Downloads/Luke/voidrice/.local/bin && ls -a'
 alias dotfiles='cd ~/dotfiles && ls -a'
+
+alias v='neovim'
 
 alias tos='cd ~/dev/tote-tocc-tos && ls -a'
 alias label='cd ~/dev/tote-tocc-labelservice && ls -a'
