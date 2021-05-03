@@ -19,8 +19,4 @@ export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
 dunst &			# dunst for notifications
 dwmblocks &		# Status bar
 compton &		# Compton display compositor for transparency and to avoid screen tearing
-
 xfce4-power-manager &   # XFCE4 Power Manager
-
-teams &			# Microsoft Teams Preview
-thunderbird &		# Thunderbird Email Client
